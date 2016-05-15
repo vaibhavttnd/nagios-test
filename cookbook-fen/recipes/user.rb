@@ -45,7 +45,7 @@ cookbook_file "#{node[:web_app][:user_dir]}/.ssh/id_rsa.pub" do
   owner node['web_app']['user_name']
   group node['web_app']['group_name']
   action :create
-  subscribes :action, "directory[#{node['web_app']['user_dir']}/.ssh]", :immediately    #check this
+#  subscribes :action, "directory[#{node['web_app']['user_dir']}/.ssh]", :immediately    #check this
 end
 
 #cookbook_file '/home/monitoring/.ssh/id_rsa2' do
