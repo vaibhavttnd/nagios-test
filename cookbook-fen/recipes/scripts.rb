@@ -34,7 +34,7 @@ end
 
 ################cron for ami_backup
 
-include_recipe 'cron'
+include_recipe 'cron::default'
 env = { AWS_DEFAULT_REGION: 'us-east-1' }
 exepath = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
