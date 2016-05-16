@@ -12,7 +12,7 @@ end
 #in attributes
 node.default['web_app']['user_name'] = "monitoring"
 node.default['web_app']['group_name'] = "monitoring"
-node.default['web_app']['user_dir'] = "/home/default"
+node.default['web_app']['user_dir'] = "/opt"
 
 directory "#{node['web_app']['user_dir']}/.ssh" do
   mode 0775
