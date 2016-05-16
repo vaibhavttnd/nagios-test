@@ -18,7 +18,7 @@ cron_d 'learning-cms-assets-code-deployment' do
   environment env
   path exepath
   day '*/15'
-  command 'bash /home/monitoring/learning-cms-assets-code-deployment.sh'
+  command "bash #{node['web_app']['user_dir']}/learning-cms-assets-code-deployment.sh"
   user node['web_app']['user_name']
 #  mailto 'system-alerts@fen.com'
 end

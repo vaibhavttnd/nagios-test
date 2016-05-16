@@ -26,6 +26,7 @@ end
 ################cron for ami_backup
 
 include_recipe 'cron::default'
+
 env = { AWS_DEFAULT_REGION: 'us-east-1' }
 exepath = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
@@ -34,7 +35,7 @@ cron_d 'ami_and_snapshot_ami_backup' do
   environment env
   path exepath
   day '*/15'
-  command 'bash /home/monitoring/ami_backup.sh'
+  command "bash #{node['web_app']['user_dir']}/ami_backup.sh"
 #  mailto 'system-alerts@fen.com'
 end
 
@@ -46,6 +47,6 @@ cron_d 'ami_and_snapshot_deletion' do
   environment env
   path exepath
   day '*/15'
-  command 'bash /home/monitoring/ami_delete.sh'
+  command "bash #{node['web_app']['user_dir']}/ami_delete.sh"
 #  mailto 'system-alerts@fen.com'
 end

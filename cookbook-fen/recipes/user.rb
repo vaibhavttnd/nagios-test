@@ -15,7 +15,6 @@ directory "#{node['web_app']['user_dir']}/.ssh" do
   user node['web_app']['user_name']
   group node['web_app']['group_name']
   action :create
-
 end
 
 ####################  Directory created
