@@ -1,7 +1,7 @@
 #use monitoring via variable
 user "#{node['web_app']['user_name']}" do
   comment 'Monitoring User'
-  uid '1234'
+  uid '1240'
   home '/opt' # change home directory
   shell '/bin/bash'
   supports :manage_home => true
