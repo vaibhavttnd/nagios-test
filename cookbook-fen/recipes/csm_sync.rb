@@ -1,6 +1,3 @@
-node.default['web_app']['user_name'] = "monitoring"
-node.default['web_app']['group_name'] = "monitoring"
-node.default['web_app']['user_dir'] = "/home/monitoring"
 
 cookbook_file "#{node['web_app']['user_dir']}/learning-cms-assets-code-deployment.sh" do
   source 'learning-cms-assets-code-deployment.sh'

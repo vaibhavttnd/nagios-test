@@ -1,8 +1,4 @@
-node.default['web_app']['user_name'] = "monitoring"
-node.default['web_app']['group_name'] = "monitoring"
-node.default['web_app']['user_dir'] = "/home/monitoring"
 
-#include all recipes in default.rb
 cookbook_file "#{node['web_app']['user_dir']}/ami_backup.sh" do
   source 'ami_backup.sh' 
   mode 0700
@@ -19,7 +15,6 @@ cookbook_file "#{node['web_app']['user_dir']}/ami_list.txt" do
   action :create
 end
 
-
 cookbook_file "#{node['web_app']['user_dir']}/ami_delete.sh" do
   source 'ami_delete.sh'
   mode 0700
@@ -27,8 +22,6 @@ cookbook_file "#{node['web_app']['user_dir']}/ami_delete.sh" do
   group node['web_app']['group_name']
   action :create
 end
-
-
 
 ################cron for ami_backup
 
