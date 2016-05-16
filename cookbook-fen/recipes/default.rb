@@ -1,7 +1,7 @@
 
 
-include_recipe "user"
+include_recipe "cookbook-fen::user"
 
-include_recipe "scripts"
+include_recipe "cookbook-fen::scripts"
 
-include_recipe "csm_sync"
+include_recipe "cookbook-fen::csm_sync"
