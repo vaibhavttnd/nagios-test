@@ -1,5 +1,5 @@
 #use monitoring via variable
-user 'monitoring' do
+user "#{node['web_app']['user_name']}" do
   comment 'Monitoring User'
   uid '1234'
   home '/opt' # change home directory
@@ -10,9 +10,10 @@ end
 #################### User created
 
 #in attributes
-node.default['web_app']['user_name'] = "monitoring"
-node.default['web_app']['group_name'] = "monitoring"
-node.default['web_app']['user_dir'] = "/opt"
+
+#node.default['web_app']['user_name'] = "monitoring"
+#node.default['web_app']['group_name'] = "monitoring"
+#node.default['web_app']['user_dir'] = "/opt"
 
 directory "#{node['web_app']['user_dir']}/.ssh" do
   mode 0775
