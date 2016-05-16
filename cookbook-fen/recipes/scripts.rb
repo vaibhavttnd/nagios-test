@@ -2,7 +2,7 @@ node.default['web_app']['user_name'] = "monitoring"
 node.default['web_app']['group_name'] = "monitoring"
 node.default['web_app']['user_dir'] = "/home/monitoring"
 
-
+#include all recipes in default.rb
 cookbook_file "#{node['web_app']['user_dir']}/ami_backup.sh" do
   source 'ami_backup.sh' 
   mode 0700
