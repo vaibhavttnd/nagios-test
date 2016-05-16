@@ -17,7 +17,6 @@ cookbook_file "#{node['web_app']['user_dir']}/ami_list.txt" do
   user node['web_app']['user_name']
   group node['web_app']['group_name']
   action :create
-#  subscribes :action, "cookbook_file[#{node['web_app']['user_dir']}/ami_backup.sh]", :immediately
 end
 
 
@@ -27,7 +26,6 @@ cookbook_file "#{node['web_app']['user_dir']}/ami_delete.sh" do
   user node['web_app']['user_name']
   group node['web_app']['group_name']
   action :create
-#  subscribes :action, "cookbook_file[#{node['web_app']['user_dir']}/ami_list.txt]", :immediately
 end
 
 
@@ -45,7 +43,6 @@ cron_d 'ami_and_snapshot_ami_backup' do
   day '*/15'
   command 'bash /home/monitoring/ami_backup.sh'
 #  mailto 'system-alerts@fen.com'
-#  subscribes :action, "cookbook_file[#{node['web_app']['user_dir']}/ami_backup.sh]", :immediately
 end
 
 
@@ -58,5 +55,4 @@ cron_d 'ami_and_snapshot_deletion' do
   day '*/15'
   command 'bash /home/monitoring/ami_delete.sh'
 #  mailto 'system-alerts@fen.com'
-#  subscribes :action, "cookbook_file[#{node['web_app']['user_dir']}/ami_delete.sh]", :immediately
 end
