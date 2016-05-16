@@ -16,7 +16,8 @@ env = { AWS_DEFAULT_REGION: 'us-east-1' }
 exepath = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 
-cron 'learning-cms-assets-code-deployment' do
+include_recipe "cron::default"
+cron_d 'learning-cms-assets-code-deployment' do
   environment env
   path exepath
   day '*/15'
