@@ -1,0 +1,9 @@
+AllCops:
+  Exclude:
+  - 'metadata.rb'
+  - '.kitchen/*'
+  - 'Vagrantfile'
+  - '.vagrant/*'
+
+LineLength:
+  Max: 200

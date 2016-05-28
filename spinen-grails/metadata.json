@@ -1,0 +1,41 @@
+{
+  "name": "spinen-grails",
+  "description": "Installs/Configures grails",
+  "long_description": "# spinen-grails-cookbook\n\nThis cookbook is essentially the same as the [maven cookbook](https://github.com/opscode-cookbooks/maven). It uses the ark cookbook to install grails from a zip file.\n\n## Supported Platforms\n\nUbuntu\n\n\n## Usage\n\n### spinen-grails::default\n\nInclude `spinen-grails` in your node's `run_list`:\n\n```json\n{\n  \"run_list\": [\n    \"recipe[spinen-grails::default]\"\n  ]\n}\n```\n\n## License and Authors\n\nAuthor:: SPINEN (<luke.reimer@spinen.com>)\n",
+  "maintainer": "SPINEN",
+  "maintainer_email": "luke.reimer@spinen.com",
+  "license": "MIT",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+    "ark": ">= 0.0.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": ""
+}
