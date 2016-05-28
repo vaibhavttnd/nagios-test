@@ -19,6 +19,6 @@
 # limitations under the License.
 #
 
-#package node['php']['mysql']['package'] do
-#  action :install
-#end
+package node['php']['mysql']['package'] do
+  action :install
+end
