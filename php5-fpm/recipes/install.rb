@@ -88,12 +88,12 @@ end
 ### - Update Host If Enabled
 
 #Run our update if stated **hostupgrade will only run on first-run by default
-if node["php_fpm"]["run_update"]
+#if node["php_fpm"]["run_update"]
 
     #Run our host update and upgrade
-    include_recipe 'hostupgrade::upgrade'
+#    include_recipe 'hostupgrade::upgrade'
 
-end
+#end
 
 
 
