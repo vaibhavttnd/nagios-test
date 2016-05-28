@@ -1,5 +1,5 @@
-name             'spinen-grails'
-maintainer       'SPINEN'
+name             'grails'
+maintainer       'grails'
 maintainer_email  'luke.reimer@spinen.com' 
 license          'MIT'
 description      'Installs/Configures grails'
