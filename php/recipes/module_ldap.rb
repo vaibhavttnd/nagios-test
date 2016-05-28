@@ -19,14 +19,14 @@
 # limitations under the License.
 #
 
-pkg = value_for_platform(
-  %w(centos redhat scientific fedora amazon oracle) => {
-    el5_range => 'php53-ldap',
-    'default' => 'php-ldap'
-  },
-  'default' => 'php5-ldap'
-)
-
-package pkg do
-  action :install
-end
+#pkg = value_for_platform(
+#  %w(centos redhat scientific fedora amazon oracle) => {
+#    el5_range => 'php53-ldap',
+#    'default' => 'php-ldap'
+#  },
+#  'default' => 'php5-ldap'
+#)
+#
+#package pkg do
+#  action :install
+#end
